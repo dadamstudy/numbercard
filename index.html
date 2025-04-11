@@ -51,8 +51,10 @@
 			});
 			$img.addEventListener('click', ()=> {
 				j = (j >= 10) ? 1:++j;
-				const sr = ``;
-				alert($img.src);
+				const sr_1 = $img.src.slice(-6);
+				const sr = `images/num_${String(j).padStart(2,'0')}.jpg`;
+				//alert($img.src);
+				$img.src = sr; //이미지주소변경
 			});
 		}
 		
